@@ -1,0 +1,14 @@
+:80 {
+	# Set the root directory for static files
+	root * /srv
+	file_server
+
+	# Set the page to show in case of 404 error
+	handle_errors {
+		@404 {
+			expression {http.error.status_code} == 404
+		}
+		rewrite @404 ./404.html
+		file_server
+	}
+}
