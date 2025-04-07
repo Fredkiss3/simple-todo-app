@@ -3,6 +3,7 @@
 	root * /srv
 	file_server
 
+ 	log
 	# Set the page to show in case of 404 error
 	handle_errors {
 		@404 {
