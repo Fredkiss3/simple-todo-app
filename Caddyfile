@@ -1,9 +1,9 @@
 :80 {
 	# Set the root directory for static files
-	root * /var/www/html
+	root * {$PUBLIC_ROOT:/app}
 	file_server
 
- 	log
+	log
 	# Set the page to show in case of 404 error
 	handle_errors {
 		@404 {
